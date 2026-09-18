@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Details</title>
+
+        <link rel="stylesheet" href="css/student.css">
+
+    </head>
+
+
+    <body class="student-page">
+
+        <!-- HEADER -->
+
+        <header class="navbar">
+
+            <div class="logo">TimedQuiz</div>
+
+            <nav>
+                <a href="index.html">Home</a>
+            </nav>
+
+        </header>
+        
+        <button onclick="backhi()" class="bac">Back</button>
+
+        <!-- STUDENT FORM -->
+
+        <main class="student-container">
+
+            <section class="student-card">
+
+                <p class="subtitle">STUDENT INFORMATION</p>
+
+                <h1>Enter Your Details</h1>
+
+                <p class="student-description">Please enter your details before starting the quiz.</p>
+
+
+                <!-- SELECTED QUIZ -->
+
+                <div class="selected-quiz">
+
+                    <span>Selected Quiz</span>
+
+                    <strong id="selected-quiz">Mathematics</strong>
+                </div>
+
+
+                <!-- FORM -->
+
+                <form id="student-form">
+
+                    <div class="form-group">
+
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" autocomplete="given-name" required>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="surname">Surname</label>
+                        <input type="text" id="surname" placeholder="Enter your surname" autocomplete="family-name" required>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="student-number">Student Number</label>
+                        <input type="text" id="student-number" placeholder="Enter your student number" autocomplete="off" required>
+                    </div>
+
+                    <p id="form-error" class="form-error"></p>
+
+                    <button type="submit" class="btn btn-primary start-quiz-btn">Start Quiz →</button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+
+        <script>
+            function backhi(){
+                window.history.back();
+            }
+        </script>
+
+        <script src="js/student.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TimedQuiz</title>
+
+    <link
+        rel="stylesheet"
+        href="css/quiz.css"
+    >
+
+</head>
+
+
+<body class="quiz-page">
+
+    <!-- =========================
+         QUIZ HEADER
+    ========================== -->
+
+    <header class="quiz-header">
+
+        <div class="logo">
+            TimedQuiz
+        </div>
+
+
+        <div
+            id="quiz-title"
+            class="quiz-title">
+            Mathematics — Chapter 3
+        </div>
+
+
+        <div class="timer-container">
+
+            <span class="timer-label">
+                Time Remaining
+            </span>
+
+            <span id="timer">
+                20:00
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN QUIZ
+    ========================== -->
+
+    <main class="quiz-container">
+
+
+        <!-- BACK -->
+
+        <button
+            onclick="backh()"
+            class="nav-btn primary-btn">
+
+            ← Back
+
+        </button>
+
+
+        <!-- =========================
+             QUIZ TOP
+        ========================== -->
+
+        <div class="quiz-top">
+
+            <div>
+
+                <span id="question-number">
+                    Question 1 of 10
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <span id="answered-count">
+                    0 Answered
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PROGRESS BAR
+        ========================== -->
+
+        <div class="progress-container">
+
+            <div
+                id="progress-bar"
+                class="progress-bar">
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             QUESTION CARD
+        ========================== -->
+
+        <section class="question-card">
+
+
+            <p class="question-label">
+                QUESTION
+            </p>
+
+
+            <h1 id="question-text">
+                Loading question...
+            </h1>
+
+
+            <!-- =========================
+                 ANSWERS
+            ========================== -->
+
+            <div
+                id="options"
+                class="answers">
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NAVIGATION
+        ========================== -->
+
+        <div class="quiz-navigation">
+
+            <button
+                id="previous-btn"
+                class="nav-btn secondary-btn"
+                type="button">
+
+                ← Previous
+
+            </button>
+
+
+            <button
+                id="next-btn"
+                class="nav-btn primary-btn"
+                type="button">
+
+                Next →
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             SUBMIT
+        ========================== -->
+
+        <div class="submit-container">
+
+            <button
+                id="submit-btn"
+                class="submit-btn"
+                type="button">
+
+                Submit Quiz
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/quiz-config.js"></script>
+
+    <script src="js/questions.js"></script>
+
+    <script src="js/questions-ch4.js"></script>
+
+    <script src="js/quiz.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TimedQuiz Results</title>
+
+        <link rel="stylesheet" href="css/result.css">
+    </head>
+
+    <body class="result-page">
+
+        <!-- HEADER -->
+
+        <header class="navbar">
+
+            <div class="logo">TimedQuiz</div>
+
+            <nav>
+                <a href="index.html">Home</a>
+            </nav>
+
+        </header>
+        
+        <!--------- RESULT ---------->
+
+        <main class="result-container">
+
+            <section class="result-card">
+
+                <p class="subtitle">QUIZ COMPLETE</p>
+
+                <h1>Your Results</h1>
+
+                <p class="result-message">You have completed the Mathematics Chapter 3 assessment.</p>
+
+                <!------------ SCORE ----------->
+
+                <div class="score-circle">
+                    <span id="score">0/10</span>
+                </div>
+
+                <div id="percentage" class="percentage">0%</div>
+
+                <div id="result-status" class="result-status">PASS</div>
+
+                <!---------- STATISTICS -------->
+
+                <div class="result-statistics">
+
+                    <div class="result-stat">
+
+                        <span id="correct">0</span>
+
+                        <small>Correct</small>
+                    </div>
+
+                    <div class="result-stat">
+
+                        <span id="incorrect">0</span>
+
+                        <small>Incorrect</small>
+                    </div>
+
+                    <div class="result-stat">
+
+                        <span id="total"> 0</span>
+
+                        <small>Total Questions</small>
+                    </div>
+
+                </div>
+
+                <!-------------- ACTIONS ----------------->
+
+                <div class="result-actions">
+
+                    <button id="review-btn" class="btn btn-secondary">Review Answers</button>
+
+                    <button id="retry-btn" class="btn btn-primary">Try Again</button>
+
+                    <a href="index.html" class="btn btn-secondary">Back Home</a>
+
+                </div>
+            </section>
+
+        </main>
+
+
+        <script src="js/result.js"></script>
+
+        <footer>
+            <h4 style="color: red;text-align: left;">Computational Mathematics Chapters 3 and 4</h4>
+            <p>&copy; 2026 TimedQuiz. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>

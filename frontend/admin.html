@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>TimedQuiz | Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body class="admin-page">
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            TimedQuiz Admin
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         ADMIN MAIN
+    ========================== -->
+
+    <main class="admin-container">
+
+
+        <!-- ADMIN HEADING -->
+
+        <div class="admin-heading">
+
+            <div>
+
+                <p class="subtitle">
+                    ADMINISTRATION
+                </p>
+
+                <h1>
+                    Student Attempts
+                </h1>
+
+            </div>
+
+
+            <button
+                id="clear-attempts"
+                class="btn btn-danger">
+
+                Clear All Attempts
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================
+             STATISTICS
+        ========================== -->
+
+        <section class="admin-statistics">
+
+            <div class="admin-stat-card">
+
+                <span id="total-students">
+                    0
+                </span>
+
+                <small>
+                    Students
+                </small>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <span id="total-attempts">
+                    0
+                </span>
+
+                <small>
+                    Total Attempts
+                </small>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <span id="passed-attempts">
+                    0
+                </span>
+
+                <small>
+                    Passed
+                </small>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <span id="failed-attempts">
+                    0
+                </span>
+
+                <small>
+                    Failed
+                </small>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             STUDENT TABLE
+        ========================== -->
+
+        <section class="attempts-container">
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                Student
+                            </th>
+
+                            <th>
+                                Attempts
+                            </th>
+
+                            <th>
+                                Latest Percentage
+                            </th>
+
+                            <th>
+                                Latest Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="students-table">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/admin.js"></script>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h4>
+            Computational Mathematics
+            Chapters 3 and 4
+        </h4>
+
+        <p>
+            &copy; 2026 TimedQuiz.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

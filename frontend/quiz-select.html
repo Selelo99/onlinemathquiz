@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Choose Quiz</title>
+
+        <link rel="stylesheet" href="css/quiz-select.css">
+    </head>
+
+
+    <body>
+
+        <header class="navbar">
+
+            <div class="logo">TimedQuiz</div>
+
+            <button onclick="backhi()" class="bac">Back</button>
+        </header>
+
+
+        <main class="quiz-selection-container">
+
+            <section class="quiz-selection-heading">
+
+                <p class="subtitle">SELECT ASSESSMENT</p>
+
+                <h1>Choose Your Quiz</h1>
+
+                <p>Select the chapter you want to write.</p>
+            </section>
+
+
+            <section class="quiz-selection-grid">
+
+                <!-- CHAPTER 3 -->
+
+                <article class="chapter-card">
+
+                    <span class="chapter-number"> CHAPTER 3</span>
+
+                    <h2>Algebra Basics</h2>
+
+                    <p>Algebraic expressions, factorisation, exponents, equations and algebraic problem solving.</p>
+
+                    <div class="chapter-info">
+                        <span>20 Questions</span>
+                        <span>30 Minutes</span>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="selectQuiz(3)">Start Chapter 3</button>
+
+                </article>
+
+                <!-- CHAPTER 4 -->
+
+                <article class="chapter-card">
+
+                    <span class="chapter-number">CHAPTER 4</span>
+
+                    <h2>Straight Line Graphs</h2>
+
+                    <p>Cartesian plane, functions, gradients, intercepts, equations, parallel and perpendicular lines.</p>
+
+                    <div class="chapter-info">
+                        <span>20 Questions</span>
+                        <span>30 Minutes</span>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="selectQuiz(4)">Start Chapter 4</button>
+
+                </article>
+
+            </section>
+        </main>
+
+
+        <footer>
+            <h4 style="color: red;text-align: left;">Computational Mathematics Chapters 3 and 4</h4>
+            <p>&copy; 2026 TimedQuiz. All Rights Reserved.</p>
+        </footer>
+
+        <script>
+            function backhi(){
+                window.history.back();
+            }
+        </script>
+        <script src="js/quiz-select.js"></script>
+
+    </body>
+</html>

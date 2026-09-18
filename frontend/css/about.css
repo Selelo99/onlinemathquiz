@@ -1,0 +1,578 @@
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: white;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(5, 25, 60, 0.93),
+            rgba(12, 55, 110, 0.88),
+            rgba(180, 20, 25, 0.78),
+            rgba(212, 170, 40, 0.72)
+        ),
+        url("image.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   BLURRED MATHEMATICS BACKGROUND
+========================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background-image:
+        url("image.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    filter: blur(5px);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   COLOUR OVERLAY
+========================================= */
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 31, 70, 0.90),
+            rgba(15, 65, 125, 0.78),
+            rgba(190, 25, 30, 0.62),
+            rgba(212, 168, 35, 0.45)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.bac {
+    position: fixed;
+
+    top: 25px;
+
+    left: 30px;
+
+    z-index: 20;
+
+    padding: 11px 22px;
+
+    border: 2px solid #d4af37;
+
+    border-radius: 8px;
+
+    background: #d71920;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.3);
+
+    transition:
+        0.25s ease;
+}
+
+
+.bac:hover {
+    background: #ffffff;
+
+    color: #123d6b;
+
+    border-color: #d71920;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+#about {
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 90px 7% 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto 45px;
+}
+
+
+.section-heading .subtitle {
+    color: #d4af37;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 45px;
+
+    font-weight: 800;
+
+    text-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+/* GOLD UNDERLINE */
+
+.section-heading h2::after {
+    content: "";
+
+    display: block;
+
+    width: 90px;
+
+    height: 4px;
+
+    margin: 15px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d71920,
+            #d4af37,
+            #ffffff
+        );
+
+    border-radius: 10px;
+}
+
+
+.section-heading > p:last-child {
+    color: #f1f5f9;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   FEATURE CONTAINER
+========================================= */
+
+.feature-container {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   FEATURE CARD
+========================================= */
+
+.feature-card {
+    position: relative;
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    color: #222222;
+
+    padding: 35px 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border-left: 6px solid #d71920;
+
+    border-top: 4px solid #d4af37;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* GRADIENT TOP LINE */
+
+.feature-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d71920,
+            #d4af37,
+            #123d6b
+        );
+}
+
+
+/* HOVER */
+
+.feature-card:hover {
+    transform: translateY(-10px);
+
+    border-left-color: #d4af37;
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.38);
+}
+
+
+/* =========================================
+   FEATURE ICON
+========================================= */
+
+.feature-icon {
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    border: 3px solid #d4af37;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================
+   ICON COLOURS
+========================================= */
+
+/* Timer */
+
+.feature-card:nth-child(1) .feature-icon {
+    background: #d71920;
+}
+
+
+/* Results */
+
+.feature-card:nth-child(2) .feature-icon {
+    background: #d4af37;
+}
+
+
+/* Performance */
+
+.feature-card:nth-child(3) .feature-icon {
+    background: #123d6b;
+}
+
+
+/* =========================================
+   FEATURE TITLE
+========================================= */
+
+.feature-card h3 {
+    color: #123d6b;
+
+    font-size: 21px;
+
+    margin: 0 0 12px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   FEATURE DESCRIPTION
+========================================= */
+
+.feature-card p {
+    color: #444444;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    width: 100%;
+    padding: 25px 7%;
+    background: rgba(255, 255, 255, 0.97);
+    border-top: 5px solid #d4af37;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+
+footer h4 {
+    color: #d71920 !important;
+
+    text-align: center !important;
+
+    font-size: 16px;
+
+    margin: 0 0 8px;
+
+    font-weight: 800;
+}
+
+
+footer p {
+    color: #123d6b;
+
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    #about {
+        padding: 90px 5% 60px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+
+    .feature-container {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+    }
+
+
+    .feature-card {
+        padding: 30px 25px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    #about {
+        padding: 90px 20px 50px;
+    }
+
+
+    .bac {
+        top: 15px;
+
+        left: 15px;
+
+        padding: 9px 16px;
+
+        font-size: 13px;
+    }
+
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .section-heading .subtitle {
+        font-size: 12px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+
+    .section-heading > p:last-child {
+        font-size: 15px;
+    }
+
+
+    .feature-container {
+        gap: 18px;
+    }
+
+
+    .feature-card {
+        padding: 25px 20px;
+    }
+
+
+    .feature-icon {
+        width: 60px;
+
+        height: 60px;
+
+        font-size: 26px;
+    }
+
+
+    .feature-card h3 {
+        font-size: 19px;
+    }
+
+
+    .feature-card p {
+        font-size: 14px;
+    }
+
+
+    footer {
+        padding: 20px 15px;
+    }
+
+
+    footer h4 {
+        font-size: 14px;
+    }
+
+}

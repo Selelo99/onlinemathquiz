@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>TimedQuiz | Admin Login</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body class="admin-login-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            TimedQuiz
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         ADMIN LOGIN
+    ====================================================== -->
+
+    <main class="admin-login-container">
+
+
+        <section class="admin-login-card">
+
+
+            <div class="admin-icon">
+                🔐
+            </div>
+
+
+            <p class="subtitle">
+                RESTRICTED ACCESS
+            </p>
+
+
+            <h1>
+                Admin Login
+            </h1>
+
+
+            <p class="admin-login-description">
+
+                Enter your administrator credentials
+                to view quiz attempts and student results.
+
+            </p>
+
+
+
+            <form
+                id="admin-login-form">
+
+
+                <!-- USERNAME -->
+
+                <div class="form-group">
+
+                    <label for="admin-username">
+                        Username
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="admin-username"
+                        placeholder="Enter username"
+                        autocomplete="username"
+                        required>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="admin-code">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="admin-code"
+                        placeholder="Enter admin password"
+                        autocomplete="current-password"
+                        required>
+
+                </div>
+
+
+
+                <!-- ERROR -->
+
+                <p
+                    id="admin-error"
+                    class="admin-error">
+                </p>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Enter Admin Panel →
+
+                </button>
+
+
+            </form>
+
+
+
+            <a
+                href="index.html"
+                class="back-home">
+
+                ← Back to Home
+
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <h4>
+            Computational Mathematics
+            Chapters 3 and 4
+        </h4>
+
+
+        <p>
+            &copy; 2026 TimedQuiz.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/admin-login.js"></script>
+
+
+</body>
+
+</html>
