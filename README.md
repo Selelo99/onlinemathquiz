@@ -155,7 +155,7 @@ The database stores persistent student and quiz-attempt information.
 
 # Project Structure
 
-A recommended production structure is:
+A production structure is:
 
 ```text
 timedquiz/
@@ -238,7 +238,7 @@ Questions: 20
 Duration: 30 minutes
 ```
 
-Additional chapters can be added by creating new question banks and updating the quiz configuration.
+###### Additional chapters can be added by creating new question banks and updating the quiz configuration.
 
 ---
 
@@ -372,7 +372,7 @@ Request:
 
 ```json
 {
-  "username": "admin",
+  "username": "********",
   "password": "********"
 }
 ```
@@ -522,19 +522,14 @@ spring.application.name=timedquiz
 
 server.port=8080
 
-spring.datasource.url=jdbc:mysql://localhost:3306/timedquiz_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Africa/Johannesburg
-
-spring.datasource.username=root
-spring.datasource.password=YOUR_LOCAL_PASSWORD
+spring.datasource.url=***********
+spring.datasource.username=******
+spring.datasource.password=******
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 ```
-
-### Important
-
-Do **not** commit real database passwords to GitHub.
 
 For production, use environment variables.
 
@@ -558,7 +553,7 @@ Install:
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/timedquiz.git
+git clone https://github.com/selelo99/onlinemathquiz.git
 ```
 
 Enter the project:
@@ -652,7 +647,7 @@ The static frontend can be hosted using GitHub Pages.
 The final public website can have an address similar to:
 
 ```text
-https://YOUR_USERNAME.github.io/timedquiz/
+https://selelo99.github.io/timedquiz/
 ```
 
 ---
@@ -664,7 +659,7 @@ The Spring Boot backend can be deployed to a cloud platform such as Railway.
 Example production API:
 
 ```text
-https://your-timedquiz-backend.example.com
+https://your-timedquiz-backend.up.railway.app
 ```
 
 The actual URL depends on the deployment provider.
@@ -715,10 +710,10 @@ For example:
 
 ```text
 Frontend:
-https://YOUR_USERNAME.github.io
+https://selelo99.github.io
 
 Backend:
-https://your-backend.example.com
+https://your-backend.up.railway.app
 ```
 
 The production CORS configuration should explicitly allow the trusted frontend origin.

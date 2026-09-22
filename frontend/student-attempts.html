@@ -1,200 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+        <title>TimedQuiz | Student Attempts</title>
 
-    <title>TimedQuiz | Student Attempts</title>
+        <link rel="stylesheet" href="style.css">
 
-    <link
-        rel="stylesheet"
-        href="style.css">
+    </head>
 
-</head>
 
+    <body class="student-attempts-page">
 
-<body class="student-attempts-page">
+        <!-- =====================================================
+            HEADER
+        ====================================================== -->
 
+        <header class="navbar">
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-
-    <header class="navbar">
-
-        <div class="logo">
-            TimedQuiz Admin
-        </div>
-
-
-        <nav>
-
-            <a href="index.html">
-                Home
-            </a>
-
-        </nav>
-
-    </header>
-
-
-
-    <!-- =====================================================
-         MAIN
-    ====================================================== -->
-
-    <main class="student-attempts-container">
-
-
-        <!-- =================================================
-             BACK TO ADMIN
-        ================================================== -->
-
-        <a
-            href="admin.html"
-            class="back-admin">
-
-            ← Back to Admin
-
-        </a>
-
-
-
-        <!-- =================================================
-             STUDENT INFORMATION
-        ================================================== -->
-
-        <section class="student-attempt-heading">
-
-
-            <p class="subtitle">
-
-                STUDENT ATTEMPT HISTORY
-
-            </p>
-
-
-            <h1 id="student-name">
-
-                Student Name
-
-            </h1>
-
-
-            <p id="attempt-count">
-
-                0 Attempts
-
-            </p>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             ATTEMPT HISTORY
-        ================================================== -->
-
-        <section class="student-history-container">
-
-
-            <div class="table-wrapper">
-
-
-                <table>
-
-
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                Attempt
-                            </th>
-
-
-                            <th>
-                                Chapter
-                            </th>
-
-
-                            <th>
-                                Score
-                            </th>
-
-
-                            <th>
-                                Percentage
-                            </th>
-
-
-                            <th>
-                                Status
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-
-
-                    <tbody
-                        id="student-attempts-table">
-
-                    </tbody>
-
-
-                </table>
-
-
+            <div class="logo">
+                TimedQuiz Admin
             </div>
 
+            <nav>
 
-        </section>
+                <a href="index.html">
+                    Home
+                </a>
 
+            </nav>
 
-    </main>
-
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
-    <script src="js/student-attempts.js"></script>
+        </header>
 
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
+        <!-- =====================================================
+            MAIN
+        ====================================================== -->
 
-    <footer>
+        <main class="student-attempts-container">
 
-        <h4>
+            <!-- =================================================
+                BACK TO ADMIN
+            ================================================== -->
 
-            Computational Mathematics
-            Chapters 3 and 4
-
-        </h4>
-
-
-        <p>
-
-            &copy; 2026 TimedQuiz.
-            All Rights Reserved.
-
-        </p>
-
-    </footer>
+            <a href="admin.html" class="back-admin">
+                ← Back to Admin
+            </a>
 
 
-</body>
+
+            <!-- =================================================
+                STUDENT INFORMATION
+            ================================================== -->
+
+            <section class="student-attempt-heading">
+
+
+                <p class="subtitle">
+
+                    STUDENT ATTEMPT HISTORY
+
+                </p>
+
+
+                <h1 id="student-name">
+
+                    Student Name
+
+                </h1>
+
+
+                <p id="attempt-count">
+
+                    0 Attempts
+
+                </p>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                ATTEMPT HISTORY
+            ================================================== -->
+
+            <section class="student-history-container">
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Attempt</th>
+
+                                <th>Chapter</th>
+
+                                <th>Score</th>
+
+                                <th>Percentage</th>
+
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody
+                            id="student-attempts-table">
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </section>
+
+
+        </main>
+
+
+
+        <!-- =====================================================
+            JAVASCRIPT
+        ====================================================== -->
+
+        <script src="js/student-attempts.js"></script>
+
+
+
+        <!-- =====================================================
+            FOOTER
+        ====================================================== -->
+
+        <footer>
+
+            <h4>
+                Computational Mathematics Chapters 3 and 4
+            </h4>
+
+            <p>
+                &copy; 2026 TimedQuiz.All Rights Reserved.
+            </p>
+
+        </footer>
+
+
+    </body>
 
 </html>

@@ -456,7 +456,7 @@ async function finishQuiz() {
     ===================================================== */
    try{
 
-        const response = await fetch("http://localhost:8080/api/attempts",
+        const response = await fetch("http://onlinemathquiz-production.up.railway.app/api/attempts",
             {
                 method: "POST",
 
