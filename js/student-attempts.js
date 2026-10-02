@@ -3,7 +3,7 @@
    ========================================================= */
 
 const API_BASE_URL =
-    "http://onlinemathquiz-production.up.railway.app/api";
+    "https://onlinemathquiz-production.up.railway.app/api";
 
 
 /* =========================================================

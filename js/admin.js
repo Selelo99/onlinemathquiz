@@ -4,7 +4,7 @@
    ========================================================= */
 
 const API_BASE_URL =
-    "http://onlinemathquiz-production.up.railway.app/api";
+    "https://onlinemathquiz-production.up.railway.app/api";
 
 
 /* =========================================================
@@ -106,7 +106,7 @@ async function loadAttempts() {
 
                     <br>
 
-                    http://localhost:8080
+                    https://onlinemathquiz-production.up.railway.app
 
                 </td>
 

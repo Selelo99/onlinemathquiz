@@ -3,7 +3,7 @@
    ADMIN LOGIN
    ========================================================= */
 
-const API_BASE_URL = "http://onlinemathquiz-production.up.railway.app/api";
+const API_BASE_URL = "https://onlinemathquiz-production.up.railway.app/api";
 
 
 /* =========================================================
