@@ -3,8 +3,7 @@
    ADMIN DASHBOARD
    ========================================================= */
 
-const API_BASE_URL =
-    "https://onlinemathquiz-production.up.railway.app/api";
+const API_BASE_URL = "https://onlinemathquiz-production.up.railway.app/api";
 
 
 /* =========================================================

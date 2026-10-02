@@ -1,52 +1,79 @@
-
 /* =========================================================
    ADMIN LOGIN
    ========================================================= */
 
-const API_BASE_URL = "https://onlinemathquiz-production.up.railway.app/api";
+const API_BASE_URL =
+    "https://onlinemathquiz-production.up.railway.app/api";
 
 
 /* =========================================================
    ELEMENTS
    ========================================================= */
 
-const adminForm = document.getElementById("admin-login-form");
-const usernameInput = document.getElementById("admin-username");
-const passwordInput = document.getElementById("admin-code");
-const adminError = document.getElementById("admin-error");
+const adminForm =
+    document.getElementById("admin-login-form");
+
+const usernameInput =
+    document.getElementById("admin-username");
+
+const passwordInput =
+    document.getElementById("admin-code");
+
+const adminError =
+    document.getElementById("admin-error");
+
+
+/* =========================================================
+   CHECK ELEMENTS
+   ========================================================= */
+
+if (!adminForm) {
+
+    console.error(
+        "Admin login form was not found."
+    );
+
+}
 
 
 /* =========================================================
    LOGIN
    ========================================================= */
 
-adminForm.addEventListener("submit",
+adminForm.addEventListener(
+    "submit",
+
     async function (event) {
 
         event.preventDefault();
 
+
         /* -------------------------------------------------
-           Clear previous error
+           CLEAR ERROR
         ------------------------------------------------- */
 
         adminError.textContent = "";
 
 
         /* -------------------------------------------------
-           Get username and password
+           GET FORM VALUES
         ------------------------------------------------- */
 
-        const username = usernameInput.value.trim();
-        const password = passwordInput.value;
+        const username =
+            usernameInput.value.trim();
+
+        const password =
+            passwordInput.value;
 
 
         /* -------------------------------------------------
-           Validate username
+           VALIDATE USERNAME
         ------------------------------------------------- */
 
         if (!username) {
 
-            adminError.textContent = "Please enter your admin username.";
+            adminError.textContent =
+                "Please enter your admin username.";
 
             usernameInput.focus();
 
@@ -55,12 +82,13 @@ adminForm.addEventListener("submit",
 
 
         /* -------------------------------------------------
-           Validate password
+           VALIDATE PASSWORD
         ------------------------------------------------- */
 
         if (!password) {
 
-            adminError.textContent = "Please enter your password.";
+            adminError.textContent =
+                "Please enter your password.";
 
             passwordInput.focus();
 
@@ -69,36 +97,52 @@ adminForm.addEventListener("submit",
 
 
         /* -------------------------------------------------
-           Disable button while logging in
+           LOGIN BUTTON
         ------------------------------------------------- */
 
-        const loginButton = adminForm.querySelector("button[type='submit']");
+        const loginButton =
+            adminForm.querySelector(
+                "button[type='submit']"
+            );
+
 
         loginButton.disabled = true;
 
-        loginButton.textContent = "Signing in...";
+        loginButton.textContent =
+            "Signing in...";
+
 
         try {
 
+
             /* =============================================
-               SEND LOGIN REQUEST
-               ============================================= */
+               LOGIN REQUEST
+            ============================================= */
 
             const response =
-                await fetch(`${API_BASE_URL}/auth/login`,
+
+                await fetch(
+                    `${API_BASE_URL}/auth/login`,
+
                     {
+
                         method: "POST",
 
                         credentials: "include",
 
                         headers: {
-                            "Content-Type": "application/json",
 
-                            "Accept": "application/json"
+                            "Content-Type":
+                                "application/json",
+
+                            "Accept":
+                                "application/json"
                         },
 
                         body: JSON.stringify({
+
                             username: username,
+
                             password: password
                         })
                     }
@@ -107,7 +151,7 @@ adminForm.addEventListener("submit",
 
             /* =============================================
                READ RESPONSE
-               ============================================= */
+            ============================================= */
 
             const text =
                 await response.text();
@@ -117,6 +161,7 @@ adminForm.addEventListener("submit",
                 "Login HTTP status:",
                 response.status
             );
+
 
             console.log(
                 "Login response:",
@@ -138,7 +183,7 @@ adminForm.addEventListener("submit",
                 catch (parseError) {
 
                     console.error(
-                        "Invalid JSON response:",
+                        "Invalid JSON:",
                         parseError
                     );
 
@@ -150,37 +195,40 @@ adminForm.addEventListener("submit",
 
 
             /* =============================================
-               CHECK LOGIN
-               ============================================= */
+               CHECK RESPONSE
+            ============================================= */
 
-            if (
-                !response.ok ||
-                !data.success
-            ) {
+            if (!response.ok) {
 
                 throw new Error(
+
                     data.message ||
-                    "Invalid username or password."
+
+                    `Login failed. HTTP ${response.status}.`
+                );
+            }
+
+
+            if (!data.success) {
+
+                throw new Error(
+
+                    data.message ||
+
+                    "Login failed."
                 );
             }
 
 
             /* =============================================
                LOGIN SUCCESS
-               ============================================= */
+            ============================================= */
 
             console.log(
                 "Admin login successful:",
                 data.username
             );
 
-
-            /*
-             * Frontend state.
-             *
-             * The real authentication is the
-             * Spring Security HTTP session.
-             */
 
             sessionStorage.setItem(
                 "adminLoggedIn",
@@ -195,14 +243,16 @@ adminForm.addEventListener("submit",
 
 
             /* =============================================
-               GO TO ADMIN DASHBOARD
-               ============================================= */
+               REDIRECT
+            ============================================= */
 
             window.location.href =
                 "admin.html";
-
         }
+
+
         catch (error) {
+
 
             console.error(
                 "Login error:",
@@ -210,11 +260,30 @@ adminForm.addEventListener("submit",
             );
 
 
-            adminError.textContent =
-                error.message ||
-                "Unable to login. Please try again.";
+            /*
+             * fetch() throws TypeError: Failed to fetch
+             * when the browser cannot complete the request,
+             * commonly because of CORS/network problems.
+             */
 
+            if (
+                error instanceof TypeError &&
+                error.message === "Failed to fetch"
+            ) {
+
+                adminError.textContent =
+                    "Unable to connect to the login server. Please try again.";
+
+            }
+            else {
+
+                adminError.textContent =
+                    error.message ||
+                    "Unable to login. Please try again.";
+            }
         }
+
+
         finally {
 
             loginButton.disabled = false;
