@@ -104,7 +104,7 @@ public class SecurityConfig {
          * either address can be used during development.
          */
 
-        configuration.setAllowedOrigins(List.of("http://127.0.0.1:5500", "http://localhost:5500", "https://selelo99.github.io", "https://onlinemathquiz-production.up.railway.app"));
+        configuration.setAllowedOrigins(List.of("http://127.0.0.1:5500", "http://localhost:5500", "https://selelo99.github.io"));
 
 
         configuration.setAllowedMethods(
